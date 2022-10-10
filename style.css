@@ -27,6 +27,10 @@ button{
 .btns{
     background-color: #4977ea;
 }
+label{
+    display: flex;
+    gap: 1rem;
+}
 /* NAVBAR */
 nav{
     display: flex;
@@ -35,15 +39,23 @@ nav{
     font-size: 0.8rem;
     padding-top: 30px;
 }
+nav #links{
+    display: flex;
+}
+nav .icon{
+    display: none;
+}
 nav .icon i{
     display: none;
+    z-index: 10px;
+    font-size: 25px;
 }
 nav ul{
     display: flex;
     list-style-type: none;
 }
 nav ul li{
-    margin-left: 1.2em;
+    margin-left: 0.8em;
 }
 .nav-right{
     margin-left: 1.2em;
@@ -58,6 +70,7 @@ nav ul li{
 }
 .btn{
     border-radius: 20px;
+    border: none;
     padding: 0.4em 1em;
     font-size: 0.8em;
     background: linear-gradient(90deg, rgba(234, 172, 83, 1) 0%, rgba(234, 123, 102, 1) 35%, rgba(234, 88, 114, 1) 92%, rgba(234, 88, 114, 1) 99%, rgba(234, 88, 114, 1) 100%);
@@ -65,6 +78,8 @@ nav ul li{
 .btns{
     border-radius: 4px;
     padding: 0.8em 1em;
+    border: none;
+    font-size: 1rem;
 }
 main{
     margin-top: 3em;
@@ -104,7 +119,7 @@ input{
     border: none;
     border-radius: 4px;
     padding-right: 3em;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 .left .button{
     font-size: 1rem;
@@ -206,7 +221,7 @@ footer .question-text h3{
     nav ul, .nav-right {
         display: none;
     }
-    nav .icon{
+    #menu{
         display: block;
     }
     main{
@@ -237,6 +252,39 @@ footer .question-text h3{
     }
     nav {
         margin-top: -5em;
+        z-index: 1;
+    }
+    nav #links{
+        z-index: 5;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 1;
+        background-color: white;
+        width: 50vw;
+        height: 45vh;
+        margin-top: 7rem;
+    }
+    nav #links ul{
+        display: block;
+        color: #525252;
+        width: 90%;
+        height: 25vh;
+        padding: 15px;
+        margin: 0;
+    }
+    nav #links ul li{
+        display: block;
+        font-size: 18px;
+        margin-top: 1.5rem;
+    }
+    nav #links .nav-right{
+        display: block;
+        margin-left: 3.2rem;
+        margin-top: -2rem;
+    }
+    nav .icon{
+        display: block;
     }
     main{
         margin-top: 30em;
@@ -272,11 +320,13 @@ footer .question-text h3{
     footer {
         margin-top: -5em;
     }
-    nav .icon i{
+    #menu{
         display: block;
         font-size: 20px;
     }
 }
+
+
 @media screen and (max-width: 375px) {
     section{
         width: 100%;
@@ -311,7 +361,7 @@ footer .question-text h3{
     footer h3{
         font-size: 15px;
     }
-    nav .icon i{
+    #menu{
         display: block;
         font-size: 20px;
     }
